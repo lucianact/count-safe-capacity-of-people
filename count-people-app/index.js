@@ -40,9 +40,8 @@ let totalCapacityNumber = document.getElementById("total-capacity-number");
 totalCapacityBtn.addEventListener("click", () => {
     let totalCapacity = document.getElementById("total-capacity").value;
     let checkTotalCapacity = parseInt(totalCapacity);
-    console.log(checkTotalCapacity);
     if (isNaN(checkTotalCapacity)) {
-        alert("Please provide a valid number")
+        alert("Please provide a valid number!")
     }
     else {
         totalCapacityDiv.style.display="none";
@@ -58,7 +57,13 @@ let capacityPercentageDivAnswer = document.getElementById("capacity-percentage-d
 let capacityPercentageNumber = document.getElementById("percentage-capacity-number");
 percentageBtn.addEventListener("click", () => {
     let capacityPercentage = document.getElementById("capacity-percentage").value;
-    capacityPercentageDiv.style.display="none";
-    capacityPercentageNumber.innerHTML = capacityPercentage + "%";
-    capacityPercentageDivAnswer.style.display="block";
+    let checkCapacityPercentage = parseInt(capacityPercentage);
+    if (isNaN(checkCapacityPercentage)) {
+        alert("Please provide a valid number!")
+    }
+    else {
+        capacityPercentageDiv.style.display="none";
+        capacityPercentageNumber.innerHTML = capacityPercentage + "%";
+        capacityPercentageDivAnswer.style.display="block";
+    }
 })
