@@ -41,6 +41,16 @@ totalCapacityBtn.addEventListener("click", () => {
     let totalCapacity = document.getElementById("total-capacity").value;
     totalCapacityDiv.style.display="none";
     totalCapacityNumber.innerHTML = totalCapacity;
-    console.log(totalCapacity)
     totalCapacityDivAnswer.style.display="block";
+})
+
+let percentageBtn = document.getElementById("percentage-btn");
+let capacityPercentageDiv = document.getElementById("capacity-percentage-div");
+let capacityPercentageDivAnswer = document.getElementById("capacity-percentage-div-answer");
+let capacityPercentageNumber = document.getElementById("percentage-capacity-number");
+percentageBtn.addEventListener("click", () => {
+    let capacityPercentage = document.getElementById("capacity-percentage").value;
+    capacityPercentageDiv.style.display="none";
+    capacityPercentageNumber.innerHTML = capacityPercentage + "%";
+    capacityPercentageDivAnswer.style.display="block";
 })
