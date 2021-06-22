@@ -1,9 +1,10 @@
+// INCREMENTATION
 // with function and onclick html property
-let countPerson = document.getElementById("count-el") 
-let people = 0
+let countPeople = document.getElementById("count-el") 
+let count = 0
 const increment = () => {
-    people += 1;
-    countPerson.innerText = people;
+    count += 1;
+    countPeople.innerText = count;
 };
 
 // with event listener 
@@ -21,3 +22,11 @@ const increment = () => {
 //     count += 1;
 //     $("#count-el").text = count; 
 // });
+
+// SAVE
+let savedEntries = document.getElementById("save-el")
+let save = () => {
+    let previousCount = count + " - "; 
+    savedEntries.innerText += previousCount; 
+}
+
