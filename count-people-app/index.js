@@ -39,9 +39,17 @@ let totalCapacityDivAnswer = document.getElementById("total-capacity-div-answer"
 let totalCapacityNumber = document.getElementById("total-capacity-number");
 totalCapacityBtn.addEventListener("click", () => {
     let totalCapacity = document.getElementById("total-capacity").value;
-    totalCapacityDiv.style.display="none";
-    totalCapacityNumber.innerHTML = totalCapacity;
-    totalCapacityDivAnswer.style.display="block";
+    let checkTotalCapacity = parseInt(totalCapacity);
+    console.log(checkTotalCapacity);
+    if (isNaN(checkTotalCapacity)) {
+        alert("Please provide a valid number")
+    }
+    else {
+        totalCapacityDiv.style.display="none";
+        totalCapacityNumber.innerHTML = totalCapacity;
+        totalCapacityDivAnswer.style.display="block";
+
+    }
 })
 
 let percentageBtn = document.getElementById("percentage-btn");
