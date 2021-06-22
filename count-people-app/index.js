@@ -32,6 +32,15 @@ let save = () => {
     countPeople.innerText = count;
 }
 
-let totalCapacity = document.getElementById("total-capacity").value;
+// let totalCapacity = document.getElementById("total-capacity").value;
 let totalCapacityBtn = document.getElementById("capacity-btn");
-
+let totalCapacityDiv = document.getElementById("total-capacity-div");
+let totalCapacityDivAnswer = document.getElementById("total-capacity-div-answer");
+let totalCapacityNumber = document.getElementById("total-capacity-number");
+totalCapacityBtn.addEventListener("click", () => {
+    let totalCapacity = document.getElementById("total-capacity").value;
+    totalCapacityDiv.style.display="none";
+    totalCapacityNumber.innerHTML = totalCapacity;
+    console.log(totalCapacity)
+    totalCapacityDivAnswer.style.display="block";
+})
