@@ -1,8 +1,5 @@
-// javascript
-let addPersonButton = document.getElementById("increment-btn")
-let countPerson = document.getElementById("count-el")
-
-// with function and onclick html property 
+// with function and onclick html property
+let countPerson = document.getElementById("count-el") 
 let people = 0
 const increment = () => {
     people += 1;
@@ -10,6 +7,8 @@ const increment = () => {
 };
 
 // with event listener 
+// let addPersonButton = document.getElementById("increment-btn")
+// let countPerson = document.getElementById("count-el")
 // let count = 0
 // addPersonButton.addEventListener("click", () => {
 //     count += 1
