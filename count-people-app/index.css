@@ -36,3 +36,10 @@ button {
     background: darkgreen;
 }
 
+#total-capacity-div-answer {
+    display: none;
+}
+
+#capacity-percentage-div-answer{
+    display: none; 
+}

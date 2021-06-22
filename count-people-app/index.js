@@ -24,9 +24,14 @@ const increment = () => {
 // });
 
 // SAVE
-let savedEntries = document.getElementById("save-el")
+let savedEntries = document.getElementById("save-el");
 let save = () => {
     let previousCount = count + " - "; 
-    savedEntries.innerText += previousCount; 
+    savedEntries.innerText += " " + previousCount; 
+    count = 0;
+    countPeople.innerText = count;
 }
+
+let totalCapacity = document.getElementById("total-capacity").value;
+let totalCapacityBtn = document.getElementById("capacity-btn");
 
