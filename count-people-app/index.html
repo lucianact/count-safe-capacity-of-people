@@ -9,28 +9,32 @@
         </script>
     </head>
     <body>
-        <h1>Full capacity of the stablishment:</h1>
-        <div id="total-capacity-div">
+        <div id="capacity-divs">
+            <label>What's the total capacity of your stablishment?</label>
+            <br>
             <input type="text" id="total-capacity" placeholder="Please enter a number please">
+            <br>
+            <label>What's the percentage of capacity your stablishment should be operating?</label>
+            <br>
+            <input id="capacity-percentage" placeholder="Enter a percentage (%)">
+            <br>
             <button type="submit" id="capacity-btn">Submit</button>
         </div>
-        <div id="total-capacity-div-answer">
+        
+        <div id="capacity-answers">
+            <h1>Full capacity of the stablishment:</h1>
             <h2 id="total-capacity-number">0</h2>
-        </div>
-            <h1>Capacity you should be operating right now:</h1>
-        <div id="capacity-percentage-div">
-            <input id="capacity-percentage" placeholder="Enter a percentage (%)">
-            <button type="submit" id="percentage-btn">Submit</button>
-        </div>
-        <div id="capacity-percentage-div-answer">
+            <h1>Capacity % you should be operating right now:</h1>
             <h2 id="percentage-capacity-number">0</h2>
         </div>
+        <div id="people-count">
         <h1>People entered:</h1>
         <h2 id="count-el">0</h2>
         <h1>Overall capacity: </h1>
         <button id="increment-btn" onclick="increment()">INCREMENT</button>
         <button id="save-btn" onclick="save()">SAVE</button>
         <p id="save-el">Previous entries: </p>
+        </div>
         <script src="index.js">
         </script>
     </body>

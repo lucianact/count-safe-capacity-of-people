@@ -36,10 +36,10 @@ button {
     background: darkgreen;
 }
 
-#total-capacity-div-answer {
+#capacity-answers {
     display: none;
 }
 
-#capacity-percentage-div-answer{
-    display: none; 
+#people-count {
+    display: none;
 }

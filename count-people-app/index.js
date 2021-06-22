@@ -1,12 +1,3 @@
-// INCREMENTATION
-// with function and onclick html property
-let countPeople = document.getElementById("count-el") 
-let count = 0
-const increment = () => {
-    count += 1;
-    countPeople.innerText = count;
-};
-
 // with event listener 
 // let addPersonButton = document.getElementById("increment-btn")
 // let countPerson = document.getElementById("count-el")
@@ -23,6 +14,45 @@ const increment = () => {
 //     $("#count-el").text = count; 
 // });
 
+// let totalCapacity = document.getElementById("total-capacity").value;
+let capacityBtn = document.getElementById("capacity-btn");
+let capacityDivs = document.getElementById("capacity-divs");
+let capacityAnswers = document.getElementById("capacity-answers");
+let peopleCountDiv = document.getElementById("people-count");
+let totalCapacityNumber = document.getElementById("total-capacity-number");
+let capacityPercentageNumber = document.getElementById("percentage-capacity-number");
+capacityBtn.addEventListener("click", () => {
+    let totalCapacity = document.getElementById("total-capacity").value;
+    let percentageCapacity = document.getElementById("capacity-percentage").value;
+    let checkTotalCapacity = parseInt(totalCapacity);
+    let checkPercentageCapacity = parseInt(percentageCapacity);
+    if (isNaN(checkTotalCapacity) || (isNaN(checkPercentageCapacity))) {
+        alert("Please provide a valid number!")
+    }
+    else {
+        percentageCount = checkTotalCapacity * checkPercentageCapacity / 100;
+        console.log(percentageCount);
+        capacityDivs.style.display="none";
+        peopleCountDiv.style.display="block"
+        totalCapacityNumber.innerHTML = totalCapacity;
+        capacityPercentageNumber.innerHTML = percentageCapacity + "%";
+        capacityAnswers.style.display="block";
+
+    }
+})
+
+// INCREMENTATION
+// with function and onclick html property
+let countPeople = document.getElementById("count-el") 
+let count = 0
+const increment = () => {
+    count += 1;
+    countPeople.innerText = count;
+    if (count === percentageCount) {
+        alert("stop!")
+    }
+};
+
 // SAVE
 let savedEntries = document.getElementById("save-el");
 let save = () => {
@@ -31,39 +61,3 @@ let save = () => {
     count = 0;
     countPeople.innerText = count;
 }
-
-// let totalCapacity = document.getElementById("total-capacity").value;
-let totalCapacityBtn = document.getElementById("capacity-btn");
-let totalCapacityDiv = document.getElementById("total-capacity-div");
-let totalCapacityDivAnswer = document.getElementById("total-capacity-div-answer");
-let totalCapacityNumber = document.getElementById("total-capacity-number");
-totalCapacityBtn.addEventListener("click", () => {
-    let totalCapacity = document.getElementById("total-capacity").value;
-    let checkTotalCapacity = parseInt(totalCapacity);
-    if (isNaN(checkTotalCapacity)) {
-        alert("Please provide a valid number!")
-    }
-    else {
-        totalCapacityDiv.style.display="none";
-        totalCapacityNumber.innerHTML = totalCapacity;
-        totalCapacityDivAnswer.style.display="block";
-
-    }
-})
-
-let percentageBtn = document.getElementById("percentage-btn");
-let capacityPercentageDiv = document.getElementById("capacity-percentage-div");
-let capacityPercentageDivAnswer = document.getElementById("capacity-percentage-div-answer");
-let capacityPercentageNumber = document.getElementById("percentage-capacity-number");
-percentageBtn.addEventListener("click", () => {
-    let capacityPercentage = document.getElementById("capacity-percentage").value;
-    let checkCapacityPercentage = parseInt(capacityPercentage);
-    if (isNaN(checkCapacityPercentage)) {
-        alert("Please provide a valid number!")
-    }
-    else {
-        capacityPercentageDiv.style.display="none";
-        capacityPercentageNumber.innerHTML = capacityPercentage + "%";
-        capacityPercentageDivAnswer.style.display="block";
-    }
-})
