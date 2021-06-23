@@ -56,6 +56,7 @@ const increment = () => {
 // SAVE
 let savedEntries = document.getElementById("save-el");
 let save = () => {
+    alert("Beware that count will be set back to 0 if you press save!")
     const time = new Date();
     let previousCount = count + " "; 
     savedEntries.innerText += " " + previousCount + "people" + " at " + time + "\n"; 
