@@ -1,20 +1,4 @@
-// with event listener 
-// let addPersonButton = document.getElementById("increment-btn")
-// let countPerson = document.getElementById("count-el")
-// let count = 0
-// addPersonButton.addEventListener("click", () => {
-//     count += 1
-//     countPerson.innerHTML = count;
-// }); 
-
-// with jQuery:
-// let count = 0; 
-// $("#increment-btn").click( function() {
-//     count += 1;
-//     $("#count-el").text = count; 
-// });
-
-// let totalCapacity = document.getElementById("total-capacity").value;
+// INPUT
 let capacityBtn = document.getElementById("capacity-btn");
 let capacityDivs = document.getElementById("capacity-divs");
 let capacityAnswers = document.getElementById("capacity-answers");
@@ -42,7 +26,6 @@ capacityBtn.addEventListener("click", () => {
 })
 
 // INCREMENTATION
-// with function and onclick html property
 let countPeople = document.getElementById("count-el") 
 let count = 0
 const increment = () => {
@@ -52,6 +35,23 @@ const increment = () => {
         alert("stop!")
     }
 };
+
+// EVENT LISTENER 
+// let addPersonButton = document.getElementById("increment-btn")
+// let countPerson = document.getElementById("count-el")
+// let count = 0
+// addPersonButton.addEventListener("click", () => {
+//     count += 1
+//     countPerson.innerHTML = count;
+// }); 
+
+// JQUERY:
+// let count = 0; 
+// $("#increment-btn").click( function() {
+//     count += 1;
+//     $("#count-el").text = count; 
+// });
+
 
 // SAVE
 let savedEntries = document.getElementById("save-el");
