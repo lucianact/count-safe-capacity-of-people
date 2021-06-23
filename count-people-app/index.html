@@ -9,33 +9,35 @@
         </script>
     </head>
     <body>
+    <!-- question -->
         <div id="capacity-divs">
-            <label>What's the total capacity of your stablishment?</label>
+            <h1>Please enter the following values:</h1>
+            <br>
+            <h1>The total capacity of your establishment</h1>
             <br>
             <input type="text" id="total-capacity" placeholder="Please enter a number please">
             <br>
-            <label>What's the percentage of capacity your stablishment should be operating?</label>
+            <h1>The capacity % your establishment should be operating</h1>
             <br>
             <input id="capacity-percentage" placeholder="Enter a percentage (%)">
             <br>
+            <br>
             <button type="submit" id="capacity-btn">Submit</button>
         </div>
-        
+        <!-- result -->
         <div id="capacity-answers">
-            <h1>Full capacity of the stablishment:</h1>
+            <h1>Full capacity:</h1>
             <h2 id="total-capacity-number">0</h2>
-            <h1>Capacity % you should be operating right now:</h1>
+            <h1>Capacity %:</h1>
             <h2 id="percentage-capacity-number">0</h2>
+            <h1>Safe amount of people:</h1>
+            <h2 id="amount-people">0</h2>
+            <h1>People entered:</h1>
+            <h2 id="count-el">0</h2>
+            <button id="increment-btn" onclick="increment()">INCREMENT</button>
+            <button id="save-btn" onclick="save()">SAVE</button>
+            <p id="save-el">Previous entries: </p>
         </div>
-        <div id="people-count">
-        <h1>People entered:</h1>
-        <h2 id="count-el">0</h2>
-        <h1>Overall capacity: </h1>
-        <button id="increment-btn" onclick="increment()">INCREMENT</button>
-        <button id="save-btn" onclick="save()">SAVE</button>
-        <p id="save-el">Previous entries: </p>
-        </div>
-        <script src="index.js">
-        </script>
+    <script src="index.js"> </script>
     </body>
 </html>

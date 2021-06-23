@@ -21,6 +21,7 @@ let capacityAnswers = document.getElementById("capacity-answers");
 let peopleCountDiv = document.getElementById("people-count");
 let totalCapacityNumber = document.getElementById("total-capacity-number");
 let capacityPercentageNumber = document.getElementById("percentage-capacity-number");
+let safeAmountOfPeople = document.getElementById("amount-people");
 capacityBtn.addEventListener("click", () => {
     let totalCapacity = document.getElementById("total-capacity").value;
     let percentageCapacity = document.getElementById("capacity-percentage").value;
@@ -33,11 +34,10 @@ capacityBtn.addEventListener("click", () => {
         percentageCount = checkTotalCapacity * checkPercentageCapacity / 100;
         console.log(percentageCount);
         capacityDivs.style.display="none";
-        peopleCountDiv.style.display="block"
         totalCapacityNumber.innerHTML = totalCapacity;
         capacityPercentageNumber.innerHTML = percentageCapacity + "%";
+        safeAmountOfPeople.innerHTML = percentageCount;
         capacityAnswers.style.display="block";
-
     }
 })
 
