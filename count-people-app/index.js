@@ -20,7 +20,7 @@ capacityBtn.addEventListener("click", () => {
         capacityDivs.style.display="none";
         totalCapacityNumber.innerHTML = totalCapacity;
         capacityPercentageNumber.innerHTML = percentageCapacity + "%";
-        safeAmountOfPeople.innerHTML = percentageCount;
+        safeAmountOfPeople.innerHTML = Math.round(percentageCount);
         capacityAnswers.style.display="block";
     }
 })
@@ -31,8 +31,8 @@ let count = 0
 const increment = () => {
     count += 1;
     countPeople.innerText = count;
-    if (count === percentageCount) {
-        alert("stop!")
+    if (count > percentageCount) {
+        alert("You should stop accepting people, it's not safe anymore!")
     }
 };
 
