@@ -56,8 +56,9 @@ const increment = () => {
 // SAVE
 let savedEntries = document.getElementById("save-el");
 let save = () => {
-    let previousCount = count + " - "; 
-    savedEntries.innerText += " " + previousCount; 
+    const time = new Date();
+    let previousCount = count + " "; 
+    savedEntries.innerText += " " + previousCount + "people" + " at " + time + "\n"; 
     count = 0;
     countPeople.innerText = count;
 }
